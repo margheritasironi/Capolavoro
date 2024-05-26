@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AliceNeural.MainPage"
+             Loaded="ContentPage_Loaded">
+    <ScrollView>
+        <Grid RowDefinitions="auto,auto,auto,auto,*" RowSpacing="5" Padding="30">
+            <Image Grid.Row="0"
+            x:Name="image"
+            Source="margherita.jpg"
+            HeightRequest="100"
+            VerticalOptions="End"
+                   IsVisible="True"
+            HorizontalOptions="Center" />
+            <Label x:Name="RecognitionText"
+               Grid.Row="1"
+               FontSize="3"
+               HorizontalOptions="Center" />
+
+            <Button Grid.Row="2"
+            x:Name="RecognizeSpeechBtn"
+            Text="Recognize speech"               
+            BackgroundColor="Orange"
+            SemanticProperties.Hint="Starts speech recognition using Speech SDK"
+            Clicked="OnRecognitionButtonClicked2"
+            HorizontalOptions="Center" />
+
+            <Label x:Name="lblStampa"
+               Text=""
+               FontSize="18"
+               Grid.Row="3"/>
+
+            <Label Grid.Row="4"
+                Text="AliceNeural - Sironi Margherita"
+                HeightRequest="20"
+                VerticalOptions="End"
+                HorizontalOptions="Center"/>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
